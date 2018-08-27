@@ -9,17 +9,67 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let imageView = UIImageView()
+    
+    var value = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
+        
+        view.backgroundColor = .white
+        setupViews()
+        changeValue()
+        
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
+    
+    
+
 
 
 }
+
+extension ViewController {
+    
+    fileprivate func setupViews() {
+        
+//        DispatchQueue.global()
+        
+        DispatchQueue.main.async {
+            
+        }
+        
+        DispatchQueue.global().async {
+            
+            self.view.addSubview(self.imageView)
+            self.imageView.backgroundColor = .red
+            self.imageView.translatesAutoresizingMaskIntoConstraints = false
+            self.imageView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
+            self.imageView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
+            self.imageView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+            self.imageView.heightAnchor.constraint(equalToConstant: self.view.frame.width).isActive = true
+            
+        }
+        
+
+        
+    }
+    
+    
+    fileprivate func changeValue() {
+        
+        DispatchQueue.main.async {
+            
+            self.value = 5
+            
+        }
+        
+        
+        
+    }
+    
+}
+
+
 
