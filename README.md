@@ -40,6 +40,14 @@
   
   
 # Synchronous & Asynchronous
+`간단하게 얘기하면 테스크 처리가 다끝날때까지 기다리느냐(Synchronous) 아니면 테스크를 지시만 해놓고 다른 일을 하러 가느냐 차이(Asynchronous)`
+  
+
+
+
+
+
+
 
 
   
